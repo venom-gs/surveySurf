@@ -1,0 +1,26 @@
+<app-asidebar></app-asidebar>
+<div style="background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+height: 100%;">
+<div class="login" style="background-color:rgb(255, 241, 180) ;
+  color: rgb(0, 8, 0);
+  padding-top: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  height: 380px;">
+	<h1>Create Survey</h1>
+    <form (ngSubmit)="formSubmit()" method="post" id="usrform">
+      Survey Title
+    	<input [(ngModel)]="aboutsurvey.surveyTitle"  type="text" name="surveytitle" placeholder="
+        Question Title" required="required" />
+        Survey Date
+        <input [(ngModel)]="aboutsurvey.surveyDate" type="date" name="surveydate" placeholder="
+          Question Title" required="required" pattern="YYYY-MM-DD" min={{today}} />
+        Survey Discription
+        <textarea [(ngModel)]="aboutsurvey.surveyDescription" name="surveydis" placeholder="
+        Enter Question here..." form="usrform"></textarea><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Create Survey</button>
+    </form>
+</div>
+</div>

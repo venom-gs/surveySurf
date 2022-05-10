@@ -1,0 +1,24 @@
+<app-asidebar></app-asidebar>
+<div style="background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+height: 100%;"><div class="login" style="background-color:rgb(255, 241, 180) ;
+  color: rgb(0, 8, 0);
+  padding-top: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  height: 380px;">
+	<h1>Create Question</h1>
+    <form (ngSubmit)="formSubmit()" method="post" id="usrform">
+      Question Title
+    	<input [(ngModel)]="surveyQuestion.questionTitle" type="text" name="quetitle" placeholder="
+        Question Title" required="required" />
+        Question Discription
+        <textarea [(ngModel)]="surveyQuestion.questionDescription" name="quedis" placeholder="
+        Enter Question here..." form="usrform"></textarea><br><br>
+        <button  type="submit" class="btn btn-primary btn-block btn-large">Create Question</button>
+        <br/>
+        <button (click)="reloadCurrentPage()" [routerLink]="'/admin/createsurvey/createsurveyquestion/'+surveyQuestion.surveyId" class="btn btn-primary btn-block btn-large">Add New Question</button>
+    </form>
+</div>
+</div>

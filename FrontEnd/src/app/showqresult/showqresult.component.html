@@ -1,0 +1,35 @@
+<app-asidebar></app-asidebar><div style="background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+height: 100%;">
+<div style="margin-left: 100px;">
+    <br><br>
+    <div class="container ">
+        <div class="row" >
+            <div class="col-md-2 ml100" *ngFor="let aboutSurvey of aboutSurveys;" style="width:90%; height: 70%; margin-bottom :5px;">
+                <div class="card mt-4 p-3 mb-2" style="border: 1px solid black;">
+                    <div class="d-flex justify-content-between" >
+                        <div class="d-flex flex-row align-items-center" style="padding-top: 0px; ">
+                            <div class="ms-2 c-details" style="margin: 20px; ">
+                                <h3 class="mb-0">SURVEY DATE:-</h3> <span>{{aboutSurvey.surveyDate}}</span>
+                            </div>
+                    <div class="mt-0 mb-0 ml-4" style="margin: 20px; border-left: 1px solid black; text-align: center; padding-left: 20 px;">
+                        <h4 class="heading">SURVEY TITLE:- <br>{{aboutSurvey.surveyTitle}}
+                            <br>SURVEY DISCRIPTION:-<br>{{aboutSurvey.surveyDescription}}</h4>
+                        
+                    </div><div class="mt-5" style="text-align:left; margin: 20px;
+                    justify-content: flex-end;" >
+                            <!-- <a [routerLink]="'/user/surveyquestions/'+aboutSurvey.surveyId" class="btn btn-primary" style=" background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+"                            >Show
+                                Questions</a> -->
+                        </div>
+
+                        </div>
+
+                        <a [routerLink]="'/admin/surveyresult/'+aboutSurvey.surveyId" class="btn btn-primary" style="text-align:left; background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+                        border-left: 1px solid black;
+                        margin-top: 55px; margin-bottom: 45px;">Show Result</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>

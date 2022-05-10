@@ -1,0 +1,71 @@
+<div >
+    <section style="background-image: linear-gradient(to right bottom, #00ffd2, #00e5e7, #00c8f1, #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9, #002cf5, #0b00ff);
+    height: 100%;" >
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5">
+                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a [routerLink]="'/login'"  class="fw-bold text-body"><u>Login here</u></a></p>
+                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                    <form (ngSubmit)="formSubmit()">
+      
+                      <div class="form-outline mb-4">
+                        <input [(ngModel)]="user.fullName" 
+                        name="fullName"
+                         type="text"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <input [(ngModel)]="user.mobileNo" 
+                        name="mobileNo"
+                         type="text"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example4cg">Your Phone no.</label>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <input  [(ngModel)]="user.profession" 
+                        name="profession"
+                        type="text" id="profession" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example4cg">Your Profession</label>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <input  [(ngModel)]="user.organization" 
+                        name="organization" 
+                        type="text"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example4cg">Organization</label>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <input  [(ngModel)]="user.email" 
+                        name="email"
+                         type="email"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <input [(ngModel)]="user.password" 
+                        name="password"
+                         type="password"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example4cdg">Password</label>
+                      </div>
+      
+                      
+      
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                      </div>
+      
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>

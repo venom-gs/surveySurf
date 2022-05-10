@@ -1,0 +1,21 @@
+<div >
+ <div id="login-box" >
+  <div class="left" style="border: 1px solid black;">
+    <form (ngSubmit)="formSubmit()">
+    <h1><b>LOG IN</b></h1>
+    <input [(ngModel)]="user.email" type="email" name="email" placeholder="Email" />
+    <input 
+    [(ngModel)]="user.password" 
+    id="password"
+     name="password" type="password" placeholder="Password" />
+    <input style="margin-left: 45px ;
+    border: 1px solid black;"type="submit" name="signup_submit" value="Login" /></form>
+    <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a [routerLink]="'/signup'"  class="fw-bold text-body"><u>Signup here</u></a></p>
+    
+  </div>
+  
+  <div class="right" style=" background-image: linear-gradient(to right bottom,  #00a8ec, #0087d7, #0077d5, #0065d1, #0052ca, #0049da, #003de9);">
+    <img src="https://www.pinclipart.com/picdir/big/63-638193_person-writing-in-a-journal-recording-clipart.png"/>
+  </div>
+</div>
+</div>

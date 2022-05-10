@@ -1,0 +1,20 @@
+<nav>
+  <a class="navbar-brand" href="#"><img id="MDB-logo"
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ueJsgYzHkcBrY1v9Jms0JFqSaJc6II_Yoe9Gkef2wA&s" alt="MDB Logo"
+  draggable="false" height="30" /></a>
+  <div class="logo">
+    ONLINE SURVEY SYSTEM </div>
+
+  <ul class="nav-links">
+    <li><a [routerLink]="'/home'" *ngIf="!isLoggedIn" class="btn">Home</a>
+    </li>
+    <li><a [routerLink]="'/signup'" *ngIf="!isLoggedIn" class="btn">SignUp</a>
+    </li>
+    <li><a [routerLink]="'/login'" *ngIf="!isLoggedIn" class="btn">LogIn</a>
+    </li>
+    <li><a *ngIf="isLoggedIn" (click)="logout()" class="btn">LogOut</a>
+    </li>
+  </ul>
+
+</nav>
+<!-- Navbar -->
